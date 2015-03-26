@@ -47,7 +47,60 @@ section .title {
     font-size: 22px;
 }
 
-section .skills span {
+/* ABOUT */
+
+.skills span {
     background: #cccccc;
     padding: 5px;
 }
+
+/* END ABOUT */
+
+/* PORTFOLIO */
+
+.portfolio_nav {
+    margin: 0 0 0 -15px;
+    padding: 0;
+}
+
+.portfolio_nav:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.portfolio_nav li {
+    float: left;
+    width: 33.333333%;
+    list-style-type: none;
+    padding: 15px;
+}
+
+.portfolio_nav li a {
+    text-align: center;
+    border: 1px dashed gray;
+    border-radius: 10px;
+    width: 100%;
+    display: inline-block;
+    height: 200px;
+    padding: 15px;
+    background: darkslategray;
+}
+
+.portfolio_nav li a:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.portfolio_nav li a:hover {
+    border: 1px solid gray;
+}
+
+.portfolio_nav li a img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* END PORTFOLIO */

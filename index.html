@@ -7,96 +7,161 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/modal.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <div class="my_photo">
-            <img src="http://cs624420.vk.me/v624420005/1167a/o_sQlbmgEdg.jpg" alt="Ivan Damaskin">
+<div class="wrap">
+
+    <header>
+        <div class="container">
+            <div class="my_photo">
+                <img src="http://cs624420.vk.me/v624420005/1167a/o_sQlbmgEdg.jpg" alt="Ivan Damaskin">
+            </div>
+            <div class="name">
+                Ivan Damaskin
+            </div>
         </div>
-        <div class="name">
-            Ivan Damaskin
-        </div>
-    </div>
-</header>
+    </header>
 
-<nav>
-    <ul>
-        <li>
-            <a href="">About</a>
-        </li>
-        <li>
-            <a href="">Portfolio</a>
-        </li>
-        <li>
-            <a href="">Contact</a>
-        </li>
-    </ul>
-</nav>
-
-<section>
-    <div class="container">
-        <div class="title">About</div>
-        <p>Hi. My name is Ivan Damaskin. 24 year. Moldova, Chishinau.</p>
-        <p>My skills:</p>
-        <div class="skills">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-            <span>JQuery</span>
-            <span>jquery-mobile</span>
-            <span>Bootstrap</span>
-            <span>Git</span>
-            <span>Adobe Photoshop</span>
-            <span>CorelDRAW</span>
-        </div>
-    </div>
-</section>
-
-<section class="portfolio">
-    <div class="container">
-        <div class="title">Portfolio</div>
-        <ul class="portfolio_nav">
-            <li>
-                <a href="http://radikal.ru/" target="_blank">http://radikal.ru/</a>
-            </li>
-            <li>
-                <a href="http://s-track.cc/" target="_blank">http://s-track.cc/</a>
-            </li>
-            <li>
-                <a href="https://play.google.com/store/apps/details?id=rum.geo.RSTracker" target="_blank">RS-Tracker</a>
-            </li>
-            <li>
-                <a href="http://utraveler.net/" target="_blank">http://utraveler.net/</a>
-            </li>
-            <li>
-                <a href="http://www.windowsphone.com/en-us/store/app/utraveler/40cc0963-cca2-4d40-a1e5-7cb998f80c74" target="_blank">uTraveler - Windows Phone</a>
-            </li>
-            <li>
-                <a href="http://999pmr.ru/" target="_blank"><img src="img/999pmr/logo.png" alt="999pmr."></a>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="title">Contact</div>
+    <nav>
         <ul>
             <li>
-                Skype - ray.3dart
+                <a href="">About</a>
             </li>
             <li>
-                E-mail - damaskin@live.ru
+                <a href="">Portfolio</a>
             </li>
             <li>
-                Phone - 68 257345
+                <a href="">Contact</a>
             </li>
         </ul>
-    </div>
-</section>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="title">About</div>
+            <p>Hi. My name is Ivan Damaskin. 24 year. Moldova, Chishinau.</p>
+            <p>My skills:</p>
+            <div class="skills">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>JQuery</span>
+                <span>jquery-mobile</span>
+                <span>Bootstrap</span>
+                <span>Git</span>
+                <span>Adobe Photoshop</span>
+                <span>CorelDRAW</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="title">Portfolio</div>
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="portfolio_item first">
+                        <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                        <!--
+                        <div class="link">
+                            <a href="#modal-enter" id="user-login-btn">Radikal</a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="portfolio_item">
+                        <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="portfolio_item last">
+                        <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="portfolio_item first">
+                        <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="portfolio_item">
+                        <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="portfolio_item last">
+                        <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            <ul class="portfolio_nav">
+                <li>
+                    <a href="http://radikal.ru/" target="_blank">http://radikal.ru/</a>
+                </li>
+                <li>
+                    <a href="http://s-track.cc/" target="_blank">http://s-track.cc/</a>
+                </li>
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=rum.geo.RSTracker" target="_blank">RS-Tracker</a>
+                </li>
+                <li>
+                    <a href="http://utraveler.net/" target="_blank">http://utraveler.net/</a>
+                </li>
+                <li>
+                    <a href="http://www.windowsphone.com/en-us/store/app/utraveler/40cc0963-cca2-4d40-a1e5-7cb998f80c74" target="_blank">uTraveler - Windows Phone</a>
+                </li>
+                <li>
+                    <a href="#modal-enter" id="user-login-btn"><img src="img/999pmr/logo.png" alt="999pmr."></a>
+                </li>
+            </ul>
+            -->
+        </div>
+
+        <!-- MODAL CONTENT -->
+
+        <section class="modal--show" id="modal-enter" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+
+            <div class="modal-inner">
+                <div class="modal-content">
+                    thtrhr
+                </div>
+            </div>
+
+            <a href="#!" class="modal-close" title="Нажмите что бы закрыть окно" data-dismiss="modal" data-close="Close">×</a>
+        </section>
+
+        <!-- END MODAL CONTENT -->
+
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="title">Contact</div>
+            <ul>
+                <li>
+                    Skype - ray.3dart
+                </li>
+                <li>
+                    E-mail - damaskin@live.ru
+                </li>
+                <li>
+                    Phone - 68 257345
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</div>
 
 </body>
 </html>

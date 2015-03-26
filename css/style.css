@@ -11,8 +11,6 @@ html, body {
 
 /* GRID SYSTEM */
 
-
-
 .row:before,
 .row:after {
     content:"";
@@ -24,7 +22,6 @@ html, body {
     float: left;
     min-height: 1px;
     width: 16.66%;
-    padding: 12px;
 }
 
 .col-1{ width: 16.66%; }

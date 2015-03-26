@@ -1,11 +1,15 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0 20px;
+}
+
+.wrap {
+
 }
 
 .container {
     width: 800px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 header {
@@ -23,8 +27,6 @@ header .name {
 }
 
 nav {
-    width: 800px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -40,11 +42,12 @@ nav ul li {
 }
 
 section {
-    margin: 20px 0 0 0;
+    margin:0;
 }
 
 section .title {
     font-size: 22px;
+    margin: 20px 0 0 0;
 }
 
 /* ABOUT */
@@ -58,25 +61,19 @@ section .title {
 
 /* PORTFOLIO */
 
-.portfolio_nav {
-    margin: 0 0 0 -15px;
-    padding: 0;
+.portfolio_item {
+    margin: 20px 5px 0 5px;
 }
 
-.portfolio_nav:after {
-    content: '';
-    display: block;
-    clear: both;
+.last {
+    margin: 20px 0 0 10px;
 }
 
-.portfolio_nav li {
-    float: left;
-    width: 33.333333%;
-    list-style-type: none;
-    padding: 15px;
+.first {
+    margin: 20px 10px 0 0;
 }
 
-.portfolio_nav li a {
+.portfolio_item a {
     text-align: center;
     border: 1px dashed gray;
     border-radius: 10px;
@@ -84,23 +81,38 @@ section .title {
     display: inline-block;
     height: 200px;
     padding: 15px;
-    background: darkslategray;
 }
 
-.portfolio_nav li a:before {
+.portfolio_item a:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%;
 }
 
-.portfolio_nav li a:hover {
+.portfolio_item a:hover {
     border: 1px solid gray;
 }
 
-.portfolio_nav li a img {
+.portfolio_item a img {
     vertical-align: middle;
     width: 100%;
+}
+
+.portfolio_item:hover .link a {
+    color: red;
+}
+
+.portfolio_item .link a {
+    height: auto;
+    padding: 0;
+    display: block;
+    border: none;
+}
+
+.portfolio_item .link a:before {
+    height: auto;
+    vertical-align: top;
 }
 
 /* END PORTFOLIO */

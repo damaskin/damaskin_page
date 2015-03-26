@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/*
+ * Tests for CSS Modal
+ * by @drublic - http://drublic.de/
+ *
+ * http://drublic.github.com/css-modal
+ */
+/**
+ * CSS Modal
+ * http://drublic.github.com/css-modal
+ *
+ * @author Hans Christian Reinl - @drublic
+ */
+/**
+ * CSS Modal Configuration
+ * http://drublic.github.com/css-modal
+ *
+ * @author Hans Christian Reinl - @drublic
+ */
+html {
+    overflow-y: scroll;
+}
+
+.has-overlay {
+    overflow: hidden;
+}
+.has-overlay > body {
+    height: 100%;
+    overflow-y: scroll;
+}
+@media screen and (max-width: 30em) {
+    .has-overlay > body {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+.modal--gallery, .modal--fade, .modal--plainscreen, .modal--zoomin, .modal--zoomout, .modal--slidefromtop, .modal--bouncefromtop, .modal--bouncefromtopshaky, .modal--show, ._modal {
+    -webkit-transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999999;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: none\9;
+}
+.modal--gallery:target, .modal--fade:target, .modal--plainscreen:target, .modal--zoomin:target, .modal--zoomout:target, .modal--slidefromtop:target, .modal--bouncefromtop:target, .modal--bouncefromtopshaky:target, .modal--show:target, ._modal:target, .is-active.modal--gallery, .is-active.modal--fade, .is-active.modal--plainscreen, .is-active.modal--zoomin, .is-active.modal--zoomout, .is-active.modal--slidefromtop, .is-active.modal--bouncefromtop, .is-active.modal--bouncefromtopshaky, .is-active.modal--show, .is-active._modal {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: auto;
+    height: auto;
+    opacity: 1;
+}
+.is-active.modal--gallery, .is-active.modal--fade, .is-active.modal--plainscreen, .is-active.modal--zoomin, .is-active.modal--zoomout, .is-active.modal--slidefromtop, .is-active.modal--bouncefromtop, .is-active.modal--bouncefromtopshaky, .is-active.modal--show, .is-active._modal {
+    display: block\9;
+    height: 100% \9;
+    width: 100% \9;
+}
+.modal--gallery:target, .modal--fade:target, .modal--plainscreen:target, .modal--zoomin:target, .modal--zoomout:target, .modal--slidefromtop:target, .modal--bouncefromtop:target, .modal--bouncefromtopshaky:target, .modal--show:target, ._modal:target, .is-active.modal--gallery, .is-active.modal--fade, .is-active.modal--plainscreen, .is-active.modal--zoomin, .is-active.modal--zoomout, .is-active.modal--slidefromtop, .is-active.modal--bouncefromtop, .is-active.modal--bouncefromtopshaky, .is-active.modal--show, .is-active._modal {
+    display: block\9;
+}
+.modal--gallery .modal-inner, .modal--fade .modal-inner, .modal--plainscreen .modal-inner, .modal--zoomin .modal-inner, .modal--zoomout .modal-inner, .modal--slidefromtop .modal-inner, .modal--bouncefromtop .modal-inner, .modal--bouncefromtopshaky .modal-inner, .modal--show .modal-inner, ._modal .modal-inner {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    z-index: 20;
+    margin-left: -325px;
+    width: 650px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+@media \0screen\,screen\9 {
+    .modal--gallery .modal-inner, .modal--fade .modal-inner, .modal--plainscreen .modal-inner, .modal--zoomin .modal-inner, .modal--zoomout .modal-inner, .modal--slidefromtop .modal-inner, .modal--bouncefromtop .modal-inner, .modal--bouncefromtopshaky .modal-inner, .modal--show .modal-inner, ._modal .modal-inner {
+        background: transparent;
+    }
+}
+.modal--gallery .modal-inner > img, .modal--fade .modal-inner > img, .modal--plainscreen .modal-inner > img, .modal--zoomin .modal-inner > img, .modal--zoomout .modal-inner > img, .modal--slidefromtop .modal-inner > img, .modal--bouncefromtop .modal-inner > img, .modal--bouncefromtopshaky .modal-inner > img, .modal--show .modal-inner > img, ._modal .modal-inner > img,
+.modal--gallery .modal-inner > video,
+.modal--fade .modal-inner > video,
+.modal--plainscreen .modal-inner > video,
+.modal--zoomin .modal-inner > video,
+.modal--zoomout .modal-inner > video,
+.modal--slidefromtop .modal-inner > video,
+.modal--bouncefromtop .modal-inner > video,
+.modal--bouncefromtopshaky .modal-inner > video,
+.modal--show .modal-inner > video,
+._modal .modal-inner > video,
+.modal--gallery .modal-inner > iframe,
+.modal--fade .modal-inner > iframe,
+.modal--plainscreen .modal-inner > iframe,
+.modal--zoomin .modal-inner > iframe,
+.modal--zoomout .modal-inner > iframe,
+.modal--slidefromtop .modal-inner > iframe,
+.modal--bouncefromtop .modal-inner > iframe,
+.modal--bouncefromtopshaky .modal-inner > iframe,
+.modal--show .modal-inner > iframe,
+._modal .modal-inner > iframe {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+.modal--gallery .modal-inner > img, .modal--fade .modal-inner > img, .modal--plainscreen .modal-inner > img, .modal--zoomin .modal-inner > img, .modal--zoomout .modal-inner > img, .modal--slidefromtop .modal-inner > img, .modal--bouncefromtop .modal-inner > img, .modal--bouncefromtopshaky .modal-inner > img, .modal--show .modal-inner > img, ._modal .modal-inner > img {
+    width: auto;
+    max-width: 100%;
+}
+.modal--gallery .modal-content, .modal--fade .modal-content, .modal--plainscreen .modal-content, .modal--zoomin .modal-content, .modal--zoomout .modal-content, .modal--slidefromtop .modal-content, .modal--bouncefromtop .modal-content, .modal--bouncefromtopshaky .modal-content, .modal--show .modal-content, ._modal .modal-content {
+    position: relative;
+    max-height: 400px;
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+@media \0screen\,screen\9 {
+    .modal--gallery .modal-content, .modal--fade .modal-content, .modal--plainscreen .modal-content, .modal--zoomin .modal-content, .modal--zoomout .modal-content, .modal--slidefromtop .modal-content, .modal--bouncefromtop .modal-content, .modal--bouncefromtopshaky .modal-content, .modal--show .modal-content, ._modal .modal-content {
+        overflow: visible;
+    }
+}
+.modal--gallery .modal-content > *, .modal--fade .modal-content > *, .modal--plainscreen .modal-content > *, .modal--zoomin .modal-content > *, .modal--zoomout .modal-content > *, .modal--slidefromtop .modal-content > *, .modal--bouncefromtop .modal-content > *, .modal--bouncefromtopshaky .modal-content > *, .modal--show .modal-content > *, ._modal .modal-content > * {
+    max-width: 100%;
+}
+.modal--gallery footer, .modal--fade footer, .modal--plainscreen footer, .modal--zoomin footer, .modal--zoomout footer, .modal--slidefromtop footer, .modal--bouncefromtop footer, .modal--bouncefromtopshaky footer, .modal--show footer, ._modal footer {
+    border-top: 1px solid white;
+    padding: 0 1.2em 18px;
+    background: #f0f0f0;
+    border-radius: 2px;
+}
+.modal--gallery .modal-close, .modal--fade .modal-close, .modal--plainscreen .modal-close, .modal--zoomin .modal-close, .modal--zoomout .modal-close, .modal--slidefromtop .modal-close, .modal--bouncefromtop .modal-close, .modal--bouncefromtopshaky .modal-close, .modal--show .modal-close, ._modal .modal-close {
+    display: block;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+}
+.modal--gallery .modal-close:focus:after, .modal--fade .modal-close:focus:after, .modal--plainscreen .modal-close:focus:after, .modal--zoomin .modal-close:focus:after, .modal--zoomout .modal-close:focus:after, .modal--slidefromtop .modal-close:focus:after, .modal--bouncefromtop .modal-close:focus:after, .modal--bouncefromtopshaky .modal-close:focus:after, .modal--show .modal-close:focus:after, ._modal .modal-close:focus:after {
+    outline: 1px dotted;
+    outline: -webkit-focus-ring-color auto 5px;
+    outline: none;
+}
+.modal--gallery .modal-close:before, .modal--fade .modal-close:before, .modal--plainscreen .modal-close:before, .modal--zoomin .modal-close:before, .modal--zoomout .modal-close:before, .modal--slidefromtop .modal-close:before, .modal--bouncefromtop .modal-close:before, .modal--bouncefromtopshaky .modal-close:before, .modal--show .modal-close:before, ._modal .modal-close:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.modal--gallery .modal-close:after, .modal--fade .modal-close:after, .modal--plainscreen .modal-close:after, .modal--zoomin .modal-close:after, .modal--zoomout .modal-close:after, .modal--slidefromtop .modal-close:after, .modal--bouncefromtop .modal-close:after, .modal--bouncefromtopshaky .modal-close:after, .modal--show .modal-close:after, ._modal .modal-close:after {
+    content: '\00d7';
+    position: absolute;
+    top: 25px;
+    right: 50%;
+    z-index: 20;
+    margin-right: -325px;
+}
+@media screen and (max-width: 690px) {
+    .modal--gallery .modal-inner, .modal--fade .modal-inner, .modal--plainscreen .modal-inner, .modal--zoomin .modal-inner, .modal--zoomout .modal-inner, .modal--slidefromtop .modal-inner, .modal--bouncefromtop .modal-inner, .modal--bouncefromtopshaky .modal-inner, .modal--show .modal-inner, ._modal .modal-inner {
+        width: auto;
+        left: 20px;
+        right: 20px;
+        margin-left: 0;
+    }
+    .modal--gallery .modal-close:after, .modal--fade .modal-close:after, .modal--plainscreen .modal-close:after, .modal--zoomin .modal-close:after, .modal--zoomout .modal-close:after, .modal--slidefromtop .modal-close:after, .modal--bouncefromtop .modal-close:after, .modal--bouncefromtopshaky .modal-close:after, .modal--show .modal-close:after, ._modal .modal-close:after {
+        margin-right: 0 !important;
+        right: 20px;
+    }
+}
+@media screen and (max-width: 30em) {
+    .modal--gallery, .modal--fade, .modal--plainscreen, .modal--zoomin, .modal--zoomout, .modal--slidefromtop, .modal--bouncefromtop, .modal--bouncefromtopshaky, .modal--show, ._modal {
+        -webkit-transform: translate(0, 400px);
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        -webkit-transition: opacity 1ms .25s;
+        -moz-transition: opacity 1ms .25s;
+        -o-transition: opacity 1ms .25s;
+        -ms-transition: opacity 1ms .25s;
+        transition: opacity 1ms .25s;
+        display: block;
+        bottom: auto;
+    }
+    .modal--gallery:target, .modal--fade:target, .modal--plainscreen:target, .modal--zoomin:target, .modal--zoomout:target, .modal--slidefromtop:target, .modal--bouncefromtop:target, .modal--bouncefromtopshaky:target, .modal--show:target, ._modal:target, .is-active.modal--gallery, .is-active.modal--fade, .is-active.modal--plainscreen, .is-active.modal--zoomin, .is-active.modal--zoomout, .is-active.modal--slidefromtop, .is-active.modal--bouncefromtop, .is-active.modal--bouncefromtopshaky, .is-active.modal--show, .is-active._modal {
+        height: 100%;
+    }
+    .modal--gallery:before, .modal--fade:before, .modal--plainscreen:before, .modal--zoomin:before, .modal--zoomout:before, .modal--slidefromtop:before, .modal--bouncefromtop:before, .modal--bouncefromtopshaky:before, .modal--show:before, ._modal:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+    }
+    .modal--gallery .modal-inner, .modal--fade .modal-inner, .modal--plainscreen .modal-inner, .modal--zoomin .modal-inner, .modal--zoomout .modal-inner, .modal--slidefromtop .modal-inner, .modal--bouncefromtop .modal-inner, .modal--bouncefromtopshaky .modal-inner, .modal--show .modal-inner, ._modal .modal-inner {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        overflow: auto;
+    }
+    .modal--gallery .modal-content, .modal--fade .modal-content, .modal--plainscreen .modal-content, .modal--zoomin .modal-content, .modal--zoomout .modal-content, .modal--slidefromtop .modal-content, .modal--bouncefromtop .modal-content, .modal--bouncefromtopshaky .modal-content, .modal--show .modal-content, ._modal .modal-content {
+        max-height: none;
+        -ms-word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+    .modal--gallery .modal-close, .modal--fade .modal-close, .modal--plainscreen .modal-close, .modal--zoomin .modal-close, .modal--zoomout .modal-close, .modal--slidefromtop .modal-close, .modal--bouncefromtop .modal-close, .modal--bouncefromtopshaky .modal-close, .modal--show .modal-close, ._modal .modal-close {
+        right: auto;
+    }
+    .modal--gallery .modal-close:before, .modal--fade .modal-close:before, .modal--plainscreen .modal-close:before, .modal--zoomin .modal-close:before, .modal--zoomout .modal-close:before, .modal--slidefromtop .modal-close:before, .modal--bouncefromtop .modal-close:before, .modal--bouncefromtopshaky .modal-close:before, .modal--show .modal-close:before, ._modal .modal-close:before {
+        display: none;
+    }
+    .modal--gallery .modal-close:after, .modal--fade .modal-close:after, .modal--plainscreen .modal-close:after, .modal--zoomin .modal-close:after, .modal--zoomout .modal-close:after, .modal--slidefromtop .modal-close:after, .modal--bouncefromtop .modal-close:after, .modal--bouncefromtopshaky .modal-close:after, .modal--show .modal-close:after, ._modal .modal-close:after {
+        top: 5px !important;
+        right: 5px;
+        left: auto;
+        z-index: 40;
+        margin-left: 0;
+    }
+}
+
+/**
+ * CSS Modal Themes
+ * http://drublic.github.com/css-modal
+ *
+ * @author Hans Christian Reinl - @drublic
+ */
+/*
+ * Global Theme Styles
+ */
+.modal--gallery, .modal--fade, .modal--plainscreen, .modal--zoomin, .modal--zoomout, .modal--slidefromtop, .modal--bouncefromtop, .modal--bouncefromtopshaky, .modal--show {
+    color: #222222;
+    line-height: 1.3;
+}
+.modal--gallery .modal-inner, .modal--fade .modal-inner, .modal--plainscreen .modal-inner, .modal--zoomin .modal-inner, .modal--zoomout .modal-inner, .modal--slidefromtop .modal-inner, .modal--bouncefromtop .modal-inner, .modal--bouncefromtopshaky .modal-inner, .modal--show .modal-inner {
+    border-radius: 2px;
+    background: white;
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+    -webkit-transition: max-width 0.25s linear, margin-left 0.125s linear;
+    transition: max-width 0.25s linear, margin-left 0.125s linear;
+}
+.modal--gallery header, .modal--fade header, .modal--plainscreen header, .modal--zoomin header, .modal--zoomout header, .modal--slidefromtop header, .modal--bouncefromtop header, .modal--bouncefromtopshaky header, .modal--show header {
+    border-bottom: 1px solid #dddddd;
+    padding: 0 1.2em;
+}
+.modal--gallery header > h2, .modal--fade header > h2, .modal--plainscreen header > h2, .modal--zoomin header > h2, .modal--zoomout header > h2, .modal--slidefromtop header > h2, .modal--bouncefromtop header > h2, .modal--bouncefromtopshaky header > h2, .modal--show header > h2 {
+    margin: 0.5em 0;
+}
+.modal--gallery .modal-content, .modal--fade .modal-content, .modal--plainscreen .modal-content, .modal--zoomin .modal-content, .modal--zoomout .modal-content, .modal--slidefromtop .modal-content, .modal--bouncefromtop .modal-content, .modal--bouncefromtopshaky .modal-content, .modal--show .modal-content {
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 1.2em;
+}
+.modal--gallery footer, .modal--fade footer, .modal--plainscreen footer, .modal--zoomin footer, .modal--zoomout footer, .modal--slidefromtop footer, .modal--bouncefromtop footer, .modal--bouncefromtopshaky footer, .modal--show footer {
+    border-top: 1px solid white;
+    padding: 0 1.2em 18px;
+    background: #f0f0f0;
+    border-radius: 2px;
+}
+.modal--gallery .modal-close, .modal--fade .modal-close, .modal--plainscreen .modal-close, .modal--zoomin .modal-close, .modal--zoomout .modal-close, .modal--slidefromtop .modal-close, .modal--bouncefromtop .modal-close, .modal--bouncefromtopshaky .modal-close, .modal--show .modal-close {
+    text-indent: -100px;
+    text-decoration: none;
+}
+.modal--gallery .modal-close:before, .modal--fade .modal-close:before, .modal--plainscreen .modal-close:before, .modal--zoomin .modal-close:before, .modal--zoomout .modal-close:before, .modal--slidefromtop .modal-close:before, .modal--bouncefromtop .modal-close:before, .modal--bouncefromtopshaky .modal-close:before, .modal--show .modal-close:before {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAEUlEQVQoz2NgeEYAjioYSQoAzOTmAXhPhyoAAAAASUVORK5CYII=");
+}
+.modal--gallery .modal-close:after, .modal--fade .modal-close:after, .modal--plainscreen .modal-close:after, .modal--zoomin .modal-close:after, .modal--zoomout .modal-close:after, .modal--slidefromtop .modal-close:after, .modal--bouncefromtop .modal-close:after, .modal--bouncefromtopshaky .modal-close:after, .modal--show .modal-close:after {
+    content: '\00d7';
+    background: white;
+    border-radius: 2px;
+    padding: 2px 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    text-indent: 0;
+}

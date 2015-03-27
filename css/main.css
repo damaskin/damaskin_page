@@ -75,12 +75,11 @@ section .title {
 
 .portfolio_item a {
     text-align: center;
-    border: 1px dashed gray;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     width: 100%;
     display: inline-block;
     height: 200px;
-    padding: 15px;
 }
 
 .portfolio_item a:before {
@@ -90,13 +89,14 @@ section .title {
     height: 100%;
 }
 
-.portfolio_item a:hover {
-    border: 1px solid gray;
+.portfolio_item a:hover img {
+    opacity: 0.9;
 }
 
 .portfolio_item a img {
     vertical-align: middle;
     width: 100%;
+    border-radius: 10px;
 }
 
 .portfolio_item:hover .link a {
@@ -116,3 +116,25 @@ section .title {
 }
 
 /* END PORTFOLIO */
+
+/* MODAL */
+
+.modal-content .title {
+    padding: 0;
+    margin: 0;
+}
+
+.modal-content .images ul {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content .images ul li {
+    list-style-type: none;
+}
+
+.modal-content .images ul li img {
+    width: 100%;
+}
+
+/* END MODAL */

@@ -97,6 +97,7 @@ section .title {
     vertical-align: middle;
     width: 100%;
     border-radius: 10px;
+    border: 1px solid gray;
 }
 
 .portfolio_item:hover .link a {
